@@ -48,7 +48,7 @@ func main() {
 
 	err = sqlDb.Connect(dbCredentials)
 	if err != nil {
-		log.Fatalf("failed to connect to database: %s", err)
+		log.Fatalf("failed to connect to database %s: %s", dbCredentials.DB, err)
 	}
 	sqlFiles, err := util.FilePathWalkDir(envVar.ScriptsDir, ".sql")
 	if err != nil {
