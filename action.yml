@@ -1,0 +1,27 @@
+name: "pg-sql"
+description: "execute scripts files to a postgresql database"
+inputs:
+  db_host:
+    description: "Database host"
+    required: true
+  db_port:
+    description: "Database port"
+    required: true
+  db_user:
+    description: "Database user"
+    required: false
+  db_password:
+    description: "Database password"
+    required: false
+  db:
+    description: "Database name"
+    required: true
+  scripts_dir:
+    description: "Scripts directory"
+    required: true
+  debug:
+    description: "Debug mode"
+    required: false
+runs:
+  using: docker
+  image: Dockerfile
