@@ -10,6 +10,6 @@ RUN make build
 
 # Now copy it into our base image.
 FROM gcr.io/distroless/base
-COPY --from=build /pg-sql/cmd/cmd /cmd
+COPY --from=build /pg-sql/cmd/main /cmd
 
 ENTRYPOINT ["/cmd"]
